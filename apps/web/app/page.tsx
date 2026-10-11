@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { project, projectModules } from "@amf/project-config";
-import { moduleEnabled } from "@atlashub/amf-experience-core";
+import { moduleEnabled, type AmfModuleKey } from "@atlashub/amf-experience-core";
 
 export default function HomePage() {
   return (
@@ -28,9 +28,8 @@ export default function HomePage() {
         <div className="eyebrow">COMPOSABLE BY DESIGN</div>
         <h2>Um projeto, apenas os módulos de que precisa.</h2>
         <div className="grid">
-          {Object.entries(projectModules).map(([key, value]) => {
-            const enabled =
-              typeof value === "boolean" ? value : Boolean(value?.enabled);
+          {Object.keys(projectModules).map((key) => {
+            const enabled = moduleEnabled(projectModules, key as AmfModuleKey);
             return (
               <article className="card" key={key}>
                 <strong>{key}</strong>
