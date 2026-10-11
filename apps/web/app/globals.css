@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--amf-background);
+  color: var(--amf-foreground);
+  font-family: var(--amf-font-body);
+}
+a { color: inherit; }
+.hero, .section, .reader {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.hero {
+  min-height: 78vh;
+  display: grid;
+  align-content: center;
+  padding: 72px 0;
+}
+.hero h1, .section h1, .reader h1 {
+  margin: 16px 0;
+  max-width: 900px;
+  font-family: var(--amf-font-display);
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-weight: 500;
+  line-height: .92;
+  letter-spacing: -.05em;
+}
+.hero p, .lede {
+  max-width: 720px;
+  color: var(--amf-muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.65;
+}
+.eyebrow {
+  color: var(--amf-accent);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+.actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.button {
+  display: inline-flex;
+  padding: 13px 18px;
+  border-radius: var(--amf-radius-pill);
+  text-decoration: none;
+  border: 1px solid var(--amf-border);
+}
+.button.primary { background: var(--amf-primary); color: var(--amf-primary-foreground); }
+.button.secondary { background: var(--amf-surface); }
+.section { padding: 80px 0; }
+.section h2 { font-family: var(--amf-font-display); font-size: clamp(2rem, 5vw, 4rem); font-weight: 500; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 32px; }
+.card {
+  display: grid;
+  gap: 12px;
+  min-height: 150px;
+  padding: 22px;
+  background: var(--amf-surface);
+  border: 1px solid var(--amf-border);
+  border-radius: var(--amf-radius-lg);
+}
+.card span, .card p { color: var(--amf-muted); }
+.reader { max-width: 780px; padding: 72px 0 120px; }
+.reader h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); }
+.back { display: inline-block; margin-bottom: 40px; color: var(--amf-muted); text-decoration: none; }
+.toc {
+  display: grid;
+  gap: 8px;
+  margin: 42px 0;
+  padding: 20px;
+  border: 1px solid var(--amf-border);
+  border-radius: var(--amf-radius-lg);
+  background: var(--amf-surface);
+}
+.chapter { padding: 38px 0; border-top: 1px solid var(--amf-border); }
+.chapter h2 { font-family: var(--amf-font-display); font-size: 2rem; }
+.chapter p { font-size: 1.08rem; line-height: 1.8; color: var(--amf-muted); }

@@ -1,0 +1,25 @@
+{
+  "name": "@amf/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node -e \"console.log('web: build is the primary validation')\""
+  },
+  "dependencies": {
+    "@amf/project-config": "*",
+    "@amf/project-content": "*",
+    "@atlashub/amf-experience-core": "github:atlashub-digital/amf-experience-core#b4190cdbb67f7676fce0328c31ac6da44974427f",
+    "next": "16.3.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.3"
+  }
+}

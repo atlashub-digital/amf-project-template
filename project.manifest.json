@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1",
+  "id": "amf-demo",
+  "name": "AMF Demo",
+  "locale": "pt-BR",
+  "modules": {
+    "library": true,
+    "webreader": true,
+    "auth": false,
+    "commerce": false,
+    "community": false,
+    "programs": false,
+    "attendant": false,
+    "companion": false,
+    "analytics": true
+  },
+  "content": {
+    "adapter": "local",
+    "source": "packages/project-content"
+  },
+  "deployment": {
+    "web": "vercel",
+    "api": "vps"
+  }
+}

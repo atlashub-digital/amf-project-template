@@ -1,0 +1,21 @@
+{
+  "name": "amf-project-template",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @amf/web",
+    "dev:api": "npm run dev --workspace @amf/api",
+    "typecheck": "npm run build --workspace @amf/project-config && npm run build --workspace @amf/project-content && npm run typecheck --workspace @amf/api && npm run typecheck --workspace @amf/web",
+    "test": "npm run test --workspace @amf/project-config && npm run test --workspace @amf/project-content && npm run test --workspace @amf/api && npm run test --workspace @amf/web",
+    "build": "npm run build --workspace @amf/project-config && npm run build --workspace @amf/project-content && npm run build --workspace @amf/api && npm run build --workspace @amf/web",
+    "build:web": "npm run build --workspace @amf/project-config && npm run build --workspace @amf/project-content && npm run build --workspace @amf/web",
+    "validate:manifest": "node automation/validate-manifest.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
