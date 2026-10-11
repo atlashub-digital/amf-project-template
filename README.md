@@ -1,0 +1,1 @@
+# amf-project-template
