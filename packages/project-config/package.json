@@ -1,0 +1,19 @@
+{
+  "name": "@amf/project-config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node -e \"console.log('project-config: no runtime tests yet')\""
+  },
+  "dependencies": {
+    "@atlashub/amf-experience-core": "github:atlashub-digital/amf-experience-core#foundation/v0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
